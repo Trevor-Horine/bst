@@ -54,6 +54,7 @@ int main(){
     }
   }
 }
+
 //method to add nodes to tree
 void add(node* current, node* tcurrent){
   if(tcurrent -> getvalue() == NULL){
