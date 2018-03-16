@@ -14,6 +14,7 @@ void print(node*, int);
 void add(node*, node*);
 void remove(node*, node*);
 node* min(node*);
+
 //main mentod
 int main(){
   node* root = new node();
@@ -53,7 +54,7 @@ int main(){
     }
   }
 }
-//method to add
+//method to add nodes to tree
 void add(node* current, node* tcurrent){
   if(tcurrent -> getvalue() == NULL){
     tcurrent -> setvalue(current -> getvalue());
@@ -78,7 +79,7 @@ void add(node* current, node* tcurrent){
   }
 }
 
-//method to remove nodes
+//method to remove nodes from tree
 void remove(node* re, node* tcurrent){
   if(re -> getvalue() == tcurrent -> getvalue()){
     if(tcurrent -> getleft() == NULL){
@@ -117,7 +118,7 @@ void print(node* current, int d){
     print(current -> getright(), d+1);
   }
 }
-
+//method to get smallest node in right sub tree
 node* min (node* current){
   if(current-> getleft() != NULL){
     return min(current -> getleft());
